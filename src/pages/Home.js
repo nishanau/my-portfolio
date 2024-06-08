@@ -24,11 +24,7 @@ const projects = [
     description: 'Developed a Windows application utilizing C# and the .NET framework. This software caters to research administrators in universities, aiding in the meticulous tracking and assessment of researchers\' performance, particularly focusing on the number and significance of their research paper publications.',
     url: 'https://example.com/research-assessment' // Replace with the actual URL
   },
-  {
-    title: '2D Plotter',
-    description: 'A plotting machine that draws pictures on a board automatically once an SVG picture is provided as input. Utilizes motors to create precise movements needed for drawing small details.',
-    url: 'https://example.com/2d-plotter' // Replace with the actual URL
-  }
+
 ];
 
 const Home = () => {
