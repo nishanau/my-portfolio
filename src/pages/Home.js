@@ -7,7 +7,7 @@ const projects = [
   {
     title: 'UI/UX Design for Interactive App',
     description: 'Created UI/UX design for a critical Bushfire Info & Management App, incorporating PACT (People, Activities, Context, Technologies) analysis. From low-fidelity to high-fidelity, I tailored the interface based on user personas and scenarios, ensuring an intuitive design for efficient bushfire information dissemination and management, aligning with PACT components.',
-    url: 'https:/app.visily.ai/projects/4873b486-50b5-466e-b503-2eff441d80e5/boards/470322' // Replace with the actual URL
+    url: 'https://app.visily.ai/projects/4873b486-50b5-466e-b503-2eff441d80e5/boards/470322' // Replace with the actual URL
   },
   {
     title: 'Web Services for Shopping Website',
