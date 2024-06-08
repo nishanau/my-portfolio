@@ -17,7 +17,7 @@ const projects = [
   {
     title: 'Cryptocurrency Digital Wallet Web App',
     description: 'A digital wallet for cryptocurrencies built using React and Node JS, where users can create a new wallet, restore old wallets using seed phrases or private keys. The app also fetches data from APIs to show prices of cryptocurrency assets, to fetch wallet details and its past transactions from block explorers. Users can send and receive cryptocurrencies.',
-    url: 'https://example.com/crypto-wallet' // Replace with the actual URL
+    url: 'http://3.25.198.253:3001/' // Replace with the actual URL
   },
   {
     title: 'Research Assessment Program (Windows App)',
