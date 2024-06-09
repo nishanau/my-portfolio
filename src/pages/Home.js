@@ -15,6 +15,11 @@ const projects = [
     description: 'A digital wallet for cryptocurrencies built using React and Node JS, where users can create a new wallet, restore old wallets using seed phrases or private keys. The app also fetches data from APIs to show prices of cryptocurrency assets, to fetch wallet details and its past transactions from block explorers. Users can send and receive cryptocurrencies.',
     url: 'http://3.25.198.253:3001/' // Replace with the actual URL
   },
+  {
+    title: 'Next.js Calculator App',
+    description: 'This is a simple calculator application built using Next.js and React, styled with Tailwind CSS. The app supports basic arithmetic operations and handles input errors gracefully. The app has been configured to be statically exported and deployed to GitHub Pages, ensuring efficient and reliable access.',
+    url: 'http://3.25.198.253:3001/' // Replace with the actual URL
+  },
 
 
 ];
