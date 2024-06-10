@@ -5,6 +5,12 @@ import Footer from "../components/Footer";
 
 const projects = [
   {
+    title: "Conway's Game of Life",
+    description:
+      "A React implementation of Conway's Game of Life, a cellular automaton devised by mathematician John Conway. This interactive app allows users to start, stop, and clear the simulation, as well as adjust the grid size. The game demonstrates the evolution of cell patterns based on initial states and simple rules.",
+    url: "https://nishanau.github.io/conway-s-game-of-life", 
+  },
+  {
     title: "UI/UX Design for Interactive App",
     description:
       "Created UI/UX design for a critical Bushfire Info & Management App, incorporating PACT (People, Activities, Context, Technologies) analysis. From low-fidelity to high-fidelity, I tailored the interface based on user personas and scenarios, ensuring an intuitive design for efficient bushfire information dissemination and management, aligning with PACT components.",
@@ -24,12 +30,7 @@ const projects = [
     url: "https://nishanau.github.io/nextjs-calculator/", 
   },
 
-  {
-    title: "Conway's Game of Life",
-    description:
-      "A React implementation of Conway's Game of Life, a cellular automaton devised by mathematician John Conway. This interactive app allows users to start, stop, and clear the simulation, as well as adjust the grid size. The game demonstrates the evolution of cell patterns based on initial states and simple rules.",
-    url: "https://nishanau.github.io/conway-s-game-of-life", 
-  },
+  
 ];
 
 const Home = () => {
