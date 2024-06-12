@@ -11,6 +11,12 @@ const projects = [
     url: "https://nishanau.github.io/conway-s-game-of-life", 
   },
   {
+    title: "Computer Networks Mapper",
+    description:
+      "Developed a web-based application that optimizes and visually maps computer networks based on user input. The tool calculates efficient subnet allocations and necessary IP addresses for routers and switches. It features a responsive UI, network visualization using vis-network, and export options for diagrams. The frontend is built with React and hosted on GitHub Pages, while the backend runs on Node.js and Python on an AWS EC2 instance. This project showcases skills in network design, web development, and cloud deployment.",
+    url: "https://nishanau.github.io/ComputerNetworksSolution/", 
+  },
+  {
     title: "UI/UX Design for Interactive App",
     description:
       "Created UI/UX design for a critical Bushfire Info & Management App, incorporating PACT (People, Activities, Context, Technologies) analysis. From low-fidelity to high-fidelity, I tailored the interface based on user personas and scenarios, ensuring an intuitive design for efficient bushfire information dissemination and management, aligning with PACT components.",
