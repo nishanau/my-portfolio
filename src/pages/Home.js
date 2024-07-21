@@ -19,9 +19,9 @@ const projects = [
         </ul>
         <p><strong>Skills Gained:</strong></p>
         <ul>
-          <li>React development.</li>
-          <li>Understanding of cellular automata.</li>
-          <li>Interactive UI design.</li>
+          <li>Advanced React hooks and state management.</li>
+          <li>Understanding and applying cellular automata concepts.</li>
+          <li>Creating interactive and dynamic user interfaces.</li>
         </ul>
       </>
     ),
@@ -51,10 +51,11 @@ const projects = [
         </ul>
         <p><strong>Skills Gained:</strong></p>
         <ul>
-          <li>Full stack development with Next.js.</li>
-          <li>Authentication with NextAuth.</li>
-          <li>Responsive design with dark mode and light mode.</li>
-          <li>Frontend development with product and category display.</li>
+          <li>Implementing authentication with NextAuth.</li>
+          <li>Integrating OAuth providers like Google and Facebook.</li>
+          <li>Using React Context API for theme management (dark/light mode).</li>
+          <li>Building and managing product listing and filtering systems.</li>
+          <li>Creating responsive and accessible user interfaces.</li>
         </ul>
       </>
     ),
@@ -75,10 +76,10 @@ const projects = [
         </ul>
         <p><strong>Skills Gained:</strong></p>
         <ul>
-          <li>Network design and optimization.</li>
-          <li>Web development with React.</li>
-          <li>Backend development with Node.js and Python.</li>
-          <li>Cloud deployment on AWS EC2.</li>
+          <li>Designing and implementing network solutions.</li>
+          <li>Utilizing vis-network for data visualization.</li>
+          <li>Developing backend services with Node.js and Python.</li>
+          <li>Deploying and managing applications on AWS EC2.</li>
         </ul>
       </>
     ),
@@ -99,9 +100,10 @@ const projects = [
         </ul>
         <p><strong>Skills Gained:</strong></p>
         <ul>
-          <li>UI/UX design.</li>
-          <li>User research and persona development.</li>
-          <li>Prototyping and wireframing.</li>
+          <li>Conducting user research and creating personas.</li>
+          <li>Applying PACT analysis in UI/UX design.</li>
+          <li>Prototyping with tools like Figma or Adobe XD.</li>
+          <li>Creating user-centered design solutions.</li>
         </ul>
       </>
     ),
@@ -122,9 +124,10 @@ const projects = [
         </ul>
         <p><strong>Skills Gained:</strong></p>
         <ul>
-          <li>API integration.</li>
-          <li>State management in React.</li>
-          <li>Web security practices.</li>
+          <li>Working with blockchain APIs and data.</li>
+          <li>Implementing secure user authentication and wallet management.</li>
+          <li>Handling real-time data updates in React.</li>
+          <li>Ensuring application security and data integrity.</li>
         </ul>
       </>
     ),
@@ -145,9 +148,10 @@ const projects = [
         </ul>
         <p><strong>Skills Gained:</strong></p>
         <ul>
-          <li>Next.js and React development.</li>
-          <li>Styling with Tailwind CSS.</li>
-          <li>Deployment to GitHub Pages.</li>
+          <li>Developing with Next.js and React.</li>
+          <li>Styling applications with Tailwind CSS.</li>
+          <li>Deploying static sites with GitHub Pages.</li>
+          <li>Managing state and handling user input in React.</li>
         </ul>
       </>
     ),
