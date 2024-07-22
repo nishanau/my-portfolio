@@ -59,7 +59,7 @@ const projects = [
         </ul>
       </>
     ),
-    url: "http://3.27.247.61:3000/",
+    url: "https://ecommerce.zapto.org/",
   },
   {
     title: "Computer Networks Mapper",
