@@ -21,7 +21,7 @@ const projects = [
         <ul>
           <li>Advanced React hooks and state management.</li>
           <li>Understanding and applying cellular automata concepts.</li>
-          <li>Creating interactive and dynamic user interfaces.</li>
+          
         </ul>
       </>
     ),
