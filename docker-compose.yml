@@ -29,10 +29,16 @@ services:
     volumes:
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
-    entrypoint: "/bin/sh -c"
+    entrypoint: sh -c
     command: >
-      "trap exit TERM;
-       while :; do sleep 6h & wait $${!}; certbot renew; done"
+      "certbot certonly --webroot
+      --webroot-path=/var/lib/letsencrypt
+      --email nishanau83@gmail.com
+      --agree-tos
+      --no-eff-email
+      -d my-portfolio.zapto.org
+      --rsa-key-size 4096"
+
 
 volumes:
   certbot-etc:
