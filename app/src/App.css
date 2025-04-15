@@ -42,3 +42,16 @@ footer {
   width: 100%;
   bottom: 0;
 }
+
+/* styles.css or your main CSS file */
+.code-container {
+    background-color: #1e1e1e; /* Dark background */
+    color: #dcdcdc; /* Light text color */
+    padding: 20px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    white-space: pre; /* Preserve whitespace */
+    line-height: 1.5; /* Line height for readability */
+    border: 1px solid #444; /* Optional border */
+}
