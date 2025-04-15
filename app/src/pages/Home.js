@@ -27,7 +27,7 @@ const projects = [
         </ul>
       </>
     ),
-    url: "http://52.65.123.0/", // replace this with your actual domain or EC2 IP
+    url: "/my-portfolio/deployment", // replace this with your actual domain or EC2 IP
   },
   
   {
