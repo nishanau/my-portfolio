@@ -5,11 +5,11 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="/my-portfolio">
+    <Router >
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/deployment" element={<DeploymentWalkthrough />} />
+          <Route path="/CICD" element={<DeploymentWalkthrough />} />
         </Routes>
       </div>
     </Router>
