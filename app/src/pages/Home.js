@@ -7,25 +7,30 @@ const projects = [
   {
     title: "CI/CD Dockerized Portfolio Deployment on AWS",
     description: (
-      <>
-        <p>
-          Built a production-grade DevOps pipeline that deploys this portfolio site from GitHub to an EC2 server using Docker, Nginx, and GitHub Actions. The system uses GitHub Actions to build the project, package it in a Docker container, push it to Docker Hub, and automatically deploy and restart the container on EC2.
-        </p>
-        <p><strong>Tasks Achieved:</strong></p>
-        <ul>
-          <li>Dockerized the React portfolio app using a multi-stage Dockerfile.</li>
-          <li>Set up GitHub Actions to automate build and deployment pipeline.</li>
-          <li>Configured EC2 instance with Docker.</li>
-          <li>Implemented reverse proxy container with Nginx + Certbot for HTTPS.</li>
-        </ul>
-        <p><strong>Skills Gained:</strong></p>
-        <ul>
-          <li>Docker multi-stage builds and image optimization.</li>
-          <li>CI/CD automation using GitHub Actions and environment secrets.</li>
-          <li>Secure deployment practices with Nginx reverse proxy + Let's Encrypt.</li>
-          <li>AWS EC2 provisioning, port management, and static IP binding.</li>
-        </ul>
-      </>
+<>
+  <p>
+    Built a production-grade DevOps pipeline that deploys this portfolio site from GitHub to an EC2 server using Docker, Nginx, and GitHub Actions. The system uses GitHub Actions to build the project, package it in a Docker container, push it to Docker Hub, and automatically deploy and restart the container on EC2.
+  </p>
+  <p><strong>Tasks Achieved:</strong></p>
+  <ul>
+    <li>Dockerized the React portfolio app using a multi-stage Dockerfile.</li>
+    <li>Set up GitHub Actions to automate build and deployment pipeline.</li>
+    <li>Configured EC2 instance with Docker.</li>
+    <li>Implemented reverse proxy container with Nginx + Certbot for HTTPS.</li>
+    <li>Deployed Prometheus and Grafana containers to monitor system and application metrics.</li>
+    <li>Set up custom Grafana dashboards to visualize container health, CPU/memory usage, and HTTP request trends.</li>
+  </ul>
+  <p><strong>Skills Gained:</strong></p>
+  <ul>
+    <li>Docker multi-stage builds and image optimization.</li>
+    <li>CI/CD automation using GitHub Actions and environment secrets.</li>
+    <li>Secure deployment practices with Nginx reverse proxy + Let's Encrypt.</li>
+    <li>AWS EC2 provisioning, port management, and static IP binding.</li>
+    <li>Container monitoring with Prometheus exporters and Grafana visualizations.</li>
+    <li>Understanding of alerting and metric scraping for production-grade observability.</li>
+  </ul>
+</>
+
     ),
     url: "/CICD", // replace this with your actual domain or EC2 IP
   },
