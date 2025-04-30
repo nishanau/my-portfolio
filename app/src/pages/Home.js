@@ -33,8 +33,63 @@ const projects = [
 
     ),
     url: "/CICD", // replace this with your actual domain or EC2 IP
-  },
-  
+  }
+  ,
+  {
+    title: "CI/CD Kubernetes Portfolio Deployment via Minikube & Cloudflare Tunnel",
+    description: (
+      <>
+        <p>
+          Deployed this portfolio project inside a private Kubernetes cluster (Minikube) running on a Hyper-V Ubuntu VM, with public access securely tunneled through Cloudflare. CI/CD is fully automated using GitHub Actions and a self-hosted runner installed on the same VM.
+        </p>
+        <p><strong>Tasks Achieved:</strong></p>
+        <ul>
+          <li>Dockerized the React portfolio app using a multi-stage Dockerfile with custom Nginx config.</li>
+          <li>Created Kubernetes Deployment, Service, and Ingress resources to run the app inside Minikube.</li>
+          <li>Installed and configured the NGINX Ingress Controller to manage internal routing.</li>
+          <li>Set up a persistent Cloudflare Tunnel linked to the custom domain <code>nishdevops.org</code>.</li>
+          <li>Automated the build/push/redeploy workflow using GitHub Actions inside the VM.</li>
+          <li>Enabled auto-start of both Minikube and Cloudflare Tunnel using systemd services on boot.</li>
+        </ul>
+        <p><strong>Skills Gained:</strong></p>
+        <ul>
+          <li>Hands-on Kubernetes experience with Deployments, Services, and Ingress controllers.</li>
+          <li>Cloudflare Tunnel setup for exposing internal apps without router config or static IPs.</li>
+          <li>Self-hosted GitHub Actions runner configuration and usage inside a secure network.</li>
+          <li>CI/CD design using Docker Hub image pushes and <code>kubectl rollout restart</code> triggers.</li>
+          <li>Systemd automation for reliable, production-like service startup.</li>
+          <li>Domain-level DNS management via Cloudflare and Zero Trust access models.</li>
+        </ul>
+      </>
+    ),
+    url: "/K8sCICD", // Replace with your actual route or use '/'
+  }
+,  
+  {
+    title: "Computer Networks Mapper",
+    description: (
+      <>
+        <p>
+          Developed a web-based application that optimizes and visually maps computer networks based on user input. The tool calculates efficient subnet allocations and necessary IP addresses for routers and switches. It features a responsive UI, network visualization using vis-network, and export options for diagrams. The frontend is built with React and hosted on GitHub Pages, while the backend runs on Node.js and Python on an AWS EC2 instance.
+        </p>
+        <p><strong>Tasks Achieved:</strong></p>
+        <ul>
+          <li>Calculated efficient subnet allocations.</li>
+          <li>Visualized network using vis-network.</li>
+          <li>Implemented export options for network diagrams.</li>
+        </ul>
+        <p><strong>Skills Gained:</strong></p>
+        <ul>
+          <li>Designing and implementing network solutions.</li>
+          <li>Utilizing vis-network for data visualization.</li>
+          <li>Developing backend services with Node.js and Python.</li>
+          <li>Deploying and managing applications on AWS EC2.</li>
+        </ul>
+      </>
+    ),
+    url: "https://nishdevops.org/cns/",
+  }
+  ,
   {
     title: "Conway's Game of Life",
     description: (
@@ -93,30 +148,6 @@ const projects = [
     url: "https://ecommerce.zapto.org/",
   },
   {
-    title: "Computer Networks Mapper",
-    description: (
-      <>
-        <p>
-          Developed a web-based application that optimizes and visually maps computer networks based on user input. The tool calculates efficient subnet allocations and necessary IP addresses for routers and switches. It features a responsive UI, network visualization using vis-network, and export options for diagrams. The frontend is built with React and hosted on GitHub Pages, while the backend runs on Node.js and Python on an AWS EC2 instance.
-        </p>
-        <p><strong>Tasks Achieved:</strong></p>
-        <ul>
-          <li>Calculated efficient subnet allocations.</li>
-          <li>Visualized network using vis-network.</li>
-          <li>Implemented export options for network diagrams.</li>
-        </ul>
-        <p><strong>Skills Gained:</strong></p>
-        <ul>
-          <li>Designing and implementing network solutions.</li>
-          <li>Utilizing vis-network for data visualization.</li>
-          <li>Developing backend services with Node.js and Python.</li>
-          <li>Deploying and managing applications on AWS EC2.</li>
-        </ul>
-      </>
-    ),
-    url: "https://nishanau.github.io/ComputerNetworksSolution/",
-  },
-  {
     title: "UI/UX Design for Interactive App",
     description: (
       <>
@@ -162,7 +193,7 @@ const projects = [
         </ul>
       </>
     ),
-    url: "http://3.25.186.18:3001/",
+    url: "https://nishdevops.org/crypto/",
   },
   {
     title: "Next.js Calculator App",
