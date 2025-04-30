@@ -38,6 +38,34 @@ const DeploymentWalkthrough = () => {
                 </code></pre>
                 </div>
 
+                <h2>Network Flow</h2>
+                <div className="code-container">
+                <pre><code>{`[User's Browser]
+      |
+   HTTPS
+      ↓
+[Cloudflare DNS → my-portfolio.zapto.org]
+      ↓
+[Public IP of EC2 Instance]
+      ↓
+[Nginx (handles SSL + reverse proxy)]
+      ↓
+[Docker container: react-app]`}</code></pre>
+                </div>
+
+                <h2>CI/CD Flow</h2>
+                <div className="code-container">
+                <pre><code>{`[GitHub Push to main branch]
+      ↓
+[GitHub Actions Workflow]
+      ↓
+[Build Docker image using multi-stage Dockerfile]
+      ↓
+[Push image to Docker Hub]
+      ↓
+[SSH into EC2 → pull + restart containers with Docker Compose]`}</code></pre>
+                </div>
+
                 <h2>Deployment Steps</h2>
 
                 <h3>1. React App Dockerization</h3>
