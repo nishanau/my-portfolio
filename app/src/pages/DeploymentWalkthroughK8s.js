@@ -24,7 +24,8 @@ const DeploymentWalkthroughK8s = () => {
                 </ul>
 
                 <h2>Directory Structure</h2>
-                <pre><code className="code-container">{`my-portfolio/
+                <div className="code-container">
+                <pre><code >{`my-portfolio/
 ├── app/                            
 │   └── src/
 ├── nginx.conf      
@@ -33,12 +34,15 @@ const DeploymentWalkthroughK8s = () => {
 │   └── workflows/
 │       └── kubernetes_workflow.yml  # GitHub Actions pipeline
 `}</code></pre>
+                </div>
+
 
                 <h2>Deployment Steps</h2>
 
                 <h3>1. Dockerize the React App</h3>
                 <p>Multi-stage Dockerfile builds and serves the app via NGINX:</p>
-                <pre><code className="code-container">{`FROM node:18 as builder
+                <div className="code-container">
+                <pre><code>{`FROM node:18 as builder
 WORKDIR /app
 COPY . .
 RUN npm ci && PUBLIC_URL=/ npm run build
@@ -46,9 +50,12 @@ RUN npm ci && PUBLIC_URL=/ npm run build
 FROM nginx:stable-alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/build /usr/share/nginx/html`}</code></pre>
+                </div>
+                
 
                 <h3>2. Kubernetes Deployment and Service</h3>
-                <pre><code className="code-container">{`apiVersion: apps/v1
+                <div className="code-container">
+                <pre><code>{`apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: react-portfolio
@@ -79,9 +86,14 @@ spec:
   - port: 80
     targetPort: 80`}</code></pre>
 
+                </div>
+                
+
                 <h3>3. Ingress Configuration</h3>
                 <p>Ingress rule to route traffic from the domain:</p>
-                <pre><code className="code-container">{`apiVersion: networking.k8s.io/v1
+                <div className="code-container">
+
+                <pre><code>{`apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: project-ingress
@@ -133,6 +145,8 @@ spec:
             name: react-portfolio
             port:
               number: 80`}</code></pre>
+                </div>
+                
 
                 <h3>4. Cloudflare Tunnel Setup</h3>
                 <ul>
@@ -145,7 +159,9 @@ spec:
 
                 <h3>5. GitHub Actions CI/CD</h3>
                 <p>Defined in <code>.github/workflows/kubernetes_workflow.yml</code> and executed via a self-hosted runner:</p>
-                <pre><code className="code-container">{`name: CI/CD - React Portfolio Deployment
+
+                <div className="code-container">
+                <pre><code>{`name: CI/CD - React Portfolio Deployment
 
 on:
   push:
@@ -181,6 +197,8 @@ jobs:
         run: |
           kubectl rollout restart deployment/react-portfolio
           kubectl rollout status deployment/react-portfolio`}</code></pre>
+                </div>
+               
 
                 <h3>6. Boot-Time Automation</h3>
                 <ul>
@@ -190,7 +208,10 @@ jobs:
 
                 <h2>Final Access</h2>
                 <p>Live site accessible at:</p>
-                <pre><code className="code-block">https://nishdevops.org</code></pre>
+                <div className="code-container">
+                <pre><code>https://nishdevops.org</code></pre>
+                </div>
+
 
                 <h2>Result</h2>
                 <ul>
