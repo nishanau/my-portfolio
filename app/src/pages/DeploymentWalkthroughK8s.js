@@ -36,6 +36,45 @@ const DeploymentWalkthroughK8s = () => {
 `}</code></pre>
                 </div>
 
+                <h2>Network Flow</h2>
+                <div className="code-container">
+                <pre><code>{`[User's Browser]
+      |
+   HTTPS
+      ↓
+[Cloudflare Edge Network]
+      |
+(TLS termination + tunnel routing)
+      ↓
+[cloudflared Tunnel in VM]
+      |
+   HTTP (localhost)
+      ↓
+[NGINX Ingress Controller]
+ ┌──────┬──────┬──────┐
+ ↓      ↓      ↓
+[Service]...[Service]
+ ↓      ↓      ↓
+[Pod: react-portfolio / cns / crypto-webapp]`}</code></pre>
+                </div>
+
+
+                <h2>CI/CD Flow</h2>
+                <div className="code-container">
+                <pre><code>{`[GitHub Push to main]
+      ↓
+[GitHub Actions]
+(kubernetes_workflow.yml)
+      ↓
+[Self-hosted Runner in VM]
+      ↓
+[Docker Build → Push to Docker Hub]
+      ↓
+[kubectl rollout restart deployment]
+      ↓
+[K8s Pod pulls new image & updates]`}</code></pre>
+</div>
+
 
                 <h2>Deployment Steps</h2>
 
