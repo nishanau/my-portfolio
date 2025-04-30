@@ -17,15 +17,15 @@ const DeploymentWalkthroughK8s = () => {
                 <h2>Architecture Components</h2>
                 <ul>
                     <li><strong>React App</strong>: Dockerized using a multi-stage build.</li>
-                    <li><strong>Kubernetes (Minikube)</strong>: Local cluster hosted on an internal Hyper-V Ubuntu VM.</li>
+                    <li><strong>Kubernetes (Minikube)</strong>: Local cluster hosted on an internal Hyper-V Ubuntu VM. Contains 3 pods, 1 for this portfolio site, 1 for Computer Networks Solution and the last for Crypto Web app</li>
                     <li><strong>NGINX Ingress Controller</strong>: Routes requests to the correct service based on URL path.</li>
                     <li><strong>Cloudflare Tunnel</strong>: Securely exposes Ingress without router or firewall changes.</li>
                     <li><strong>GitHub Actions (Self-hosted)</strong>: CI/CD pipeline runs inside the same VM via <code>kubernetes_workflow.yml</code>.</li>
                 </ul>
 
                 <h2>Directory Structure</h2>
-                <pre><code className="code-block">{`my-portfolio/
-├── app/                            # React app with Dockerfile and nginx.conf
+                <pre><code className="code-container">{`my-portfolio/
+├── app/                            
 │   └── src/
 ├── nginx.conf      
 ├── Dockerfile  
@@ -38,7 +38,7 @@ const DeploymentWalkthroughK8s = () => {
 
                 <h3>1. Dockerize the React App</h3>
                 <p>Multi-stage Dockerfile builds and serves the app via NGINX:</p>
-                <pre><code className="code-block">{`FROM node:18 as builder
+                <pre><code className="code-container">{`FROM node:18 as builder
 WORKDIR /app
 COPY . .
 RUN npm ci && PUBLIC_URL=/ npm run build
@@ -48,7 +48,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/build /usr/share/nginx/html`}</code></pre>
 
                 <h3>2. Kubernetes Deployment and Service</h3>
-                <pre><code className="code-block">{`apiVersion: apps/v1
+                <pre><code className="code-container">{`apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: react-portfolio
@@ -81,7 +81,7 @@ spec:
 
                 <h3>3. Ingress Configuration</h3>
                 <p>Ingress rule to route traffic from the domain:</p>
-                <pre><code className="code-block">{`apiVersion: networking.k8s.io/v1
+                <pre><code className="code-container">{`apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: project-ingress
@@ -145,7 +145,7 @@ spec:
 
                 <h3>5. GitHub Actions CI/CD</h3>
                 <p>Defined in <code>.github/workflows/kubernetes_workflow.yml</code> and executed via a self-hosted runner:</p>
-                <pre><code className="code-block">{`name: CI/CD - React Portfolio Deployment
+                <pre><code className="code-container">{`name: CI/CD - React Portfolio Deployment
 
 on:
   push:
