@@ -21,18 +21,18 @@ jobs:
     - name: Deploy and restart containers
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
-          set -e
-          cd ~/my-portfolio
+set -e
+cd ~/my-portfolio
 
-          echo "🌀 Pulling latest code..."
-          git pull origin main
+echo "🌀 Pulling latest code..."
+git pull origin main
 
-          echo "🔨 Rebuilding all containers..."
-          docker-compose build --no-cache
+echo "🔨 Rebuilding all containers..."
+docker-compose build --no-cache
 
-          echo "🔁 Restarting all containers..."
-          docker-compose down
-          docker-compose up -d
+echo "🔁 Restarting all containers..."
+docker-compose down
+docker-compose up -d
 
-          echo "✅ Deployment complete."
-        EOF
+echo "✅ Deployment complete."
+EOF
